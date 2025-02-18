@@ -28,9 +28,8 @@ jobs:
 
       - name: Commit Gemfile.lock
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git remote set-url origin https://x-access-token:${{ secrets.MY_GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git add Gemfile.lock
-          git commit -m "Générer Gemfile.lock"
-          git push origin main
+          git diff --exit-code || (git add Gemfile.lock && git commit -m "Générer Gemfile.lock" && git push origin main)
+
