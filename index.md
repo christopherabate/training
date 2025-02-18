@@ -3,7 +3,7 @@ title: Page1
 layout: default
 ---
 
-{% section couverture %}
+{% include section.html section_id="couverture" content="
 
 <img src="assets/images/orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
 <img src="assets/images/a11y.svg" width="100" height="100" alt="" loading="lazy" class="mb-3">
@@ -16,15 +16,15 @@ Centre d'Expertise Accessibilité Numérique
 
 <svg class="align-bottom" width="1em" height="1em" aria-hidden="true" focusable="false"><use xlink:href="assets/images/slayder-sprites.svg#clock-white"></use></svg> 1h00
 
-{% endsection %}
-{% section intro %}
+" %}
+{% include section.html section_id="intro" content="
 
 # Introduction
 
 <img alt="" src="assets/images/devices.svg" loading="lazy" class="h-50 img-fluid position-absolute bottom-0 start-50 translate-middle-x">
 
-{% endsection %}
-{% section objectifs %}
+" %}
+{% include section.html section_id="objectifs" content="
 
 ## Objectifs
 
@@ -32,8 +32,8 @@ Centre d'Expertise Accessibilité Numérique
 - Identifier les **obstacles** à éviter
 - Tester et améliorer l’**accessibilité des contenus**
 
-{% endsection %}
-{% section merci %}
+" %}
+{% include section.html section_id="merci" content="
 
 <img src="assets/images/orange-logo.svg" width="100" height="100" alt="Orange" loading="lazy" class="mb-3">
 
@@ -41,4 +41,4 @@ Centre d'Expertise Accessibilité Numérique
 
 Pour toute demande de support ZZZ ACCESSIBILITY SUPPORT : [accessibility.support@orange.com](mailto:accessibility.support@orange.com)
 
-{% endsection %}
+" %}
