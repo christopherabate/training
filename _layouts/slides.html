@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ page.dir }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Titre du document</title>
+    <title>{{ page.title }}</title>
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
   </head>
   <body>
     <header role="banner" class="d-flex justify-content-between">
-      <h1 aria-current="location">Formation</h1>
+      <h1 aria-current="location">{{ page.title }}</h1>
       <nav class="btn-group" role="navigation" aria-label="Navigation générale">
         <div id="summary" class="dropdown">
           <button class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" type="button" aria-expanded="false">Sommaire</button>
