@@ -3,6 +3,7 @@ title: Training
 layout: default
 ---
 
-{% for training in site.collections %}
-{{ training.label }}
+{% for collection in site.collections %}
+{{ collection.label }} - {{ collection.relative_directory }} - {{ collection.directory }} - {{ collection.output }}
+///
 {% endfor %}
