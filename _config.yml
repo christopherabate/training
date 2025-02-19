@@ -1,8 +1,5 @@
 remote_theme: christopherabate/training
 title: Training
-collections:
-      rediger:
-collections_dir: slides
 kramdown:
   hard_wrap: true
 
