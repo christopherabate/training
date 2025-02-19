@@ -1,4 +1,0 @@
----
-id: thanks
----
-# Merci !
