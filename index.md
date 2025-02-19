@@ -4,5 +4,5 @@ layout: default
 ---
 
 {% for training in site.collections %}
-label
+{{ training.label }}
 {% endfor %}
