@@ -3,8 +3,7 @@ layout: default
 ---
 
 {% for training in site.pages %}
-  {% unless training.path contains "/" and training.path != training.name %}
-  {% else %}
+  {% unless training.path == training.name %}
     - [{{ training.title }}]({{ training.url | absolute_url }})
   {% endunless %}
 {% endfor %}
