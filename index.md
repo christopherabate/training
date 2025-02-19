@@ -3,6 +3,6 @@ title: Training
 layout: default
 ---
 
-{% for training in site.html_pages %}
+{% for training in site.pages %}
 - [{{ training.title }}]({{ training.url | absolute_url }})
 {% endfor %}
