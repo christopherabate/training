@@ -2,5 +2,6 @@
 title: Rédiger accessible
 layout: default
 ---
-
-# Rédiger accessible
+{% for slide in site.slides %}
+<section id="slide.id">{{ slide.content }}</section>
+{% endfor %}
