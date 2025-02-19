@@ -1,2 +1,4 @@
 remote_theme: christopherabate/slayder-theme
 title: Training
+collections:    
+  slides:
