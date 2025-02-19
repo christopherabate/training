@@ -2,3 +2,4 @@ remote_theme: christopherabate/slayder-theme
 title: Training
 collections:
       rediger:
+collections_dir: slides
