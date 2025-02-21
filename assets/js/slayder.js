@@ -100,6 +100,5 @@
   const popoverList = [...document.querySelectorAll('[data-bs-toggle="popover"]')].map(popoverTriggerEl => new boosted.Popover(popoverTriggerEl));
   
   // Sandbox init
-  import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}";
   sandbox({ editable: true })
 })()
