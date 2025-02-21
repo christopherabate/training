@@ -98,7 +98,4 @@
 
   // Popovers init
   const popoverList = [...document.querySelectorAll('[data-bs-toggle="popover"]')].map(popoverTriggerEl => new boosted.Popover(popoverTriggerEl));
-  
-  // Sandbox init
-  sandbox({ editable: true })
 })()
