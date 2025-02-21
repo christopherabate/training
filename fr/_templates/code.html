@@ -1,14 +1,36 @@
 <section id="code">
-  <h1>Exemple de bloc de code</h1>
-  <pre><code class="language-css">.visually-hidden {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  clip: rect(0,0,0,0) !important;
-  white-space: nowrap !important;
-  border: 0 !important;
-}</code></pre>
+  <h2 class="display-1">Éditeur de code</h2>
+  <div class="row gy-3">
+    <div class="col-xl-6">
+      <div class="alert alert-danger">
+        <span class="alert-icon"><span class="visually-hidden">Exemple non-conforme</span></span>
+        <div class="multiple-sandbox">
+          <pre><code class="html">&lt;h1&gt;demo&lt;/h1&gt;</code></pre>
+          <pre><code class="css">h1 { color: red; }</code></pre>
+          <pre><code class="js">console.log(document.querySelectorAll('h1'));</code></pre>
+          <iframe>
+            <!doctype html>
+            <html>
+              <head>
+                <meta charset="utf-8">
+                <style>${css}</style>
+              </head>
+              <body>
+                ${html}
+                <script>${js}</script>
+              </body>
+            </html>
+          </iframe>
+        </div>
+      </div>
+      <button type="button" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Lecteur d'écran" data-bs-content="Bla bla bla bla bla">Tester</button>
+    </div>
+    <div class="col-xl-6">
+      <div class="alert alert-success">
+        <span class="alert-icon"><span class="visually-hidden">Exemple conforme</span></span>
+        <p>Conforme</p>
+      </div>
+      <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-title="Lecteur d'écran" data-bs-content="Bla bla bla bla bla">Tester</button>
+    </div>
+  </div>
 </section>
