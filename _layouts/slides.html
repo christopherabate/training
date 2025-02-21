@@ -65,5 +65,9 @@
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
     <script src="{{ '/assets/js/colorModeToggler.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/slayder.js' | relative_url }}"></script>
+    <script type="module">
+      import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}";
+      sandbox();
+    </script>
   </body>
 </html>
