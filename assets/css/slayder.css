@@ -65,6 +65,55 @@ body:fullscreen footer {
 }
 
 @media print {
+  input,
+  textarea,
+  select {
+    all: revert;
+  }
+  
+  blockquote,
+  ul,
+  ol,
+  table {
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+  
+  a,
+  a:link,
+  a:visited {
+    background: transparent !important;
+    color: unset;
+    font-weight: 700;
+    text-decoration: underline !important;
+  }
+
+  a[href^="http"]:after,
+  a[href^="https"]:after {
+    content: " (" attr(href) ")";
+  }
+
+  img[alt]:after {
+    content: " (" attr(alt) ")";
+  }
+
+  video,
+  object,
+  iframe {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  
   main {
     overflow: auto !important;
   }
