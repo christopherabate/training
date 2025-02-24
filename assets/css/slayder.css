@@ -66,7 +66,7 @@ body:fullscreen footer {
   display: none !important;
 }
 
-@media print (prefers-color-scheme: light) {
+@media print {
   body {
     display: block !important;
   }
