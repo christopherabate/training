@@ -65,3 +65,20 @@ body:fullscreen header,
 body:fullscreen footer {
   display: none !important;
 }
+
+@media print {
+  body {
+    display: block !important;
+  }
+  
+  main {
+    overflow-x: auto !important;
+    overflow-y: auto !important;
+    display: block !important;
+  }
+  
+  body:fullscreen header,
+  body:fullscreen footer {
+    display: none !important;
+  }
+}
