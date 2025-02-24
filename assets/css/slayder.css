@@ -3,7 +3,6 @@ html, body {
 }
 
 body {
-  display: flex;
   flex-direction: column;
 }
 
@@ -13,7 +12,6 @@ main {
   overflow-y: none;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  display: flex;
 }
 
 section {
@@ -67,12 +65,7 @@ body:fullscreen footer {
 }
 
 @media print {
-  body {
-    display: block !important;
-  }
-  
   main {
     overflow: auto !important;
-    display: block !important;
   }
 }
