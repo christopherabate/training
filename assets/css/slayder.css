@@ -74,7 +74,10 @@ body:fullscreen footer {
   blockquote,
   ul,
   ol,
-  table {
+  table,
+  .card,
+  .accordion,
+  .sandbox {
     page-break-inside: avoid;
   }
 
@@ -96,8 +99,7 @@ body:fullscreen footer {
     text-decoration: underline !important;
   }
 
-  a[href^="http"]:after,
-  a[href^="https"]:after {
+  a[href]:not([href=""]):after {
     content: " (" attr(href) ")";
   }
 
