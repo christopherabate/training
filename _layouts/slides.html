@@ -11,7 +11,7 @@
     <link rel="preload" href="{{ '/assets/images/slayder-sprites.svg' | relative_url }}" as="image" type="image/svg+xml">
   </head>
   <body>
-    <header role="banner" class="d-flex justify-content-between">
+    <header role="banner" class="d-print-none d-flex justify-content-between">
       <h1 aria-current="location">{{ page.title }}</h1>
       <nav class="btn-group" role="navigation" aria-label="Navigation générale">
         <div id="summary" class="dropdown">
@@ -55,7 +55,7 @@
       </nav>
     </header>
     <main role="main">{{ content }}</main>
-    <footer>
+    <footer class="d-print-none">
       <nav id="pagination" aria-label="Pagination" class="d-none d-md-block">
         <ul class="pagination justify-content-center"></ul>
       </nav>
