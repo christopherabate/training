@@ -72,8 +72,7 @@ body:fullscreen footer {
   }
   
   main {
-    overflow-x: auto !important;
-    overflow-y: auto !important;
+    overflow: auto !important;
     display: block !important;
   }
   
