@@ -10,7 +10,7 @@
     <link href="{{ '/assets/css/slayder.css' | relative_url }}" rel="stylesheet">
     <link rel="preload" href="{{ '/assets/images/slayder-sprites.svg' | relative_url }}" as="image" type="image/svg+xml">
   </head>
-  <body class="d-print-block">
+  <body class="d-flex d-print-block">
     <header role="banner" class="d-print-none d-flex justify-content-between">
       <h1 aria-current="location">{{ page.title }}</h1>
       <nav class="btn-group" role="navigation" aria-label="Navigation générale">
@@ -54,7 +54,7 @@
         </div>
       </nav>
     </header>
-    <main role="main" class="d-print-block">{{ content }}</main>
+    <main role="main" class="d-flex d-print-block">{{ content }}</main>
     <footer class="d-print-none">
       <nav id="pagination" aria-label="Pagination" class="d-none d-md-block">
         <ul class="pagination justify-content-center"></ul>
