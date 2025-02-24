@@ -7,6 +7,7 @@
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-a11y-dark.css" rel="stylesheet">
     <link href="{{ '/assets/css/slayder.css' | relative_url }}" rel="stylesheet">
     <link rel="preload" href="{{ '/assets/images/slayder-sprites.svg' | relative_url }}" as="image" type="image/svg+xml">
   </head>
@@ -61,6 +62,7 @@
       </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script src="{{ '/assets/js/colorModeToggler.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/slayder.js' | relative_url }}"></script>
     <script type="module">
@@ -68,6 +70,9 @@
       import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}"
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
+        box.addEventListener("input", (event) => {
+          Prism.highlightAll();
+        });
       });
     </script>
   </body>
