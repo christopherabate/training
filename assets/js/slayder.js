@@ -44,25 +44,23 @@
         `).join('');
 
         // Pagination buid
-        const slides = [...document.querySelectorAll('section')].map(slide => slide.id);
-        const currentIndex = slides.indexOf(entry.target.id);
+        const slides = document.querySelectorAll('section');
+        const current = parseInt(window.location.hash.split('#section_').pop());
+        
         document.querySelector('#pagination .pagination').innerHTML = `
-          <li class="page-item ${currentIndex === 0 ? 'disabled' : ''}">
-            <a ${currentIndex > 0 ? `href="#${slides[currentIndex - 1]}"` : ''} class="page-link">${i18n('previous')}</a>
-          </li>
-          ${slides.map((slide, index) => `
-            <li class="page-item ${currentIndex === index ? 'active' : ''}" ${currentIndex === index ? 'aria-current="page"' : ''}>
-              <a href="#${slide}" class="page-link">${index + 1}</a>
-            </li>
-          `).join('')}
-          <li class="page-item ${currentIndex === slides.length - 1 ? 'disabled' : ''}">
-            <a ${currentIndex < slides.length - 1 ? `href="#${slides[currentIndex + 1]}"` : ''} class="page-link">${i18n('next')}</a>
-          </li>
+          <li class="page-item ${current === 1 ? 'disabled' : ''}"><a ${current > 1 ? `href="#section_${current - 1}"` : ''} class="page-link" aria-label="${i18n('previous')}"></a></li>
+            ${[...slides].map((slide, index) => `
+              <li class="page-item ${current === index + 1 ? 'active' : ''}" ${current === index + 1 ? 'aria-current="page"' : ''}><a href="#section_${index + 1}" class="page-link">${index + 1}</a></li>
+            `).join('')}
+          <li class="page-item ${current === slides.length ? 'disabled' : ''}"><a ${current < slides.length ? `href="#section_${current + 1}"` : ''} class="page-link" aria-label="${i18n('next')}"></a></li>
         `;
       }
     });
   }, { threshold: .5 });
-  document.querySelectorAll('section').forEach(section => observer.observe(section));
+  document.querySelectorAll('section').forEach((section, index) => {
+    section.id = `section_${index + 1}`;
+    observer.observe(section);
+  });
 
   // Fullscreen enable
   document.querySelector('#fullscreen').addEventListener('click', (event) => {
