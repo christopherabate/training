@@ -7,7 +7,7 @@
     <!-- Copyright © 2014 Monotype Imaging Inc. All rights reserved -->
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-a11y-dark.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.11.1/styles/a11y-dark.min.css" rel="stylesheet">
     <link href="{{ '/assets/css/slayder.css' | relative_url }}" rel="stylesheet">
   </head>
   <body class="d-flex d-print-block">
@@ -61,7 +61,7 @@
       </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
     <script src="{{ '/assets/js/colorModeToggler.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/slayder.js' | relative_url }}"></script>
     <script type="module">
@@ -70,7 +70,7 @@
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
         box.addEventListener("input", (event) => {
-          Prism.highlightAll();
+          hljs.highlightAll();
         });
       });
     </script>
