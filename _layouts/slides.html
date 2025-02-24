@@ -69,7 +69,7 @@
       import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}"
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
-        box.addEventListener("input", (event) => {
+        box.addEventListener("change", (event) => {
           Prism.highlightAll();
         });
       });
