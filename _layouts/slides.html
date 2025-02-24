@@ -71,7 +71,7 @@
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
         box.addEventListener("input", (event) => {
-          Prism.highlightElement(box);
+          Prism.highlightAll();
         });
       });
     </script>
