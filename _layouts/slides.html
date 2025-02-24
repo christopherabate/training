@@ -235,7 +235,7 @@ pre[class*="language-"] {
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
         box.addEventListener("input", (event) => {
-          Prism.highlightAll();
+          Prism.highlightElement(box);
         });
       });
     </script>
