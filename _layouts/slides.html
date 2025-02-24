@@ -8,6 +8,170 @@
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/orange-helvetica.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/prism-themes@1.9.0/themes/prism-a11y-dark.css" rel="stylesheet">
+    <style>
+      /**
+ * a11y-dark theme for JavaScript, CSS, and HTML
+ * Based on the okaidia theme: https://github.com/PrismJS/prism/blob/gh-pages/themes/prism-okaidia.css
+ * @author ericwbailey
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #2b2b2b;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: 0.1em;
+	border-radius: 0.3em;
+	white-space: normal;
+}
+
+.prism--token.prism--comment,
+.prism--token.prism--prolog,
+.prism--token.prism--doctype,
+.prism--token.prism--cdata {
+	color: #d4d0ab;
+}
+
+.prism--token.prism--punctuation {
+	color: #fefefe;
+}
+
+.prism--token.prism--property,
+.prism--token.prism--tag,
+.prism--token.prism--constant,
+.prism--token.prism--symbol,
+.prism--token.prism--deleted {
+	color: #ffa07a;
+}
+
+.prism--token.prism--boolean,
+.prism--token.prism--number {
+	color: #00e0e0;
+}
+
+.prism--token.prism--selector,
+.prism--token.prism--attr-name,
+.prism--token.prism--string,
+.prism--token.prism--char,
+.prism--token.prism--builtin,
+.prism--token.prism--inserted {
+	color: #abe338;
+}
+
+.prism--token.prism--operator,
+.prism--token.prism--entity,
+.prism--token.prism--url,
+.language-css .prism--token.prism--string,
+.style .prism--token.prism--string,
+.prism--token.prism--variable {
+	color: #00e0e0;
+}
+
+.prism--token.prism--atrule,
+.prism--token.prism--attr-value,
+.prism--token.prism--function {
+	color: #ffd700;
+}
+
+.prism--token.prism--keyword {
+	color: #00e0e0;
+}
+
+.prism--token.prism--regex,
+.prism--token.prism--important {
+	color: #ffd700;
+}
+
+.prism--token.prism--important,
+.prism--token.prism--bold {
+	font-weight: bold;
+}
+
+.prism--token.prism--italic {
+	font-style: italic;
+}
+
+.prism--token.prism--entity {
+	cursor: help;
+}
+
+@media screen and (-ms-high-contrast: active) {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		color: windowText;
+		background: window;
+	}
+
+	:not(pre) > code[class*="language-"],
+	pre[class*="language-"] {
+		background: window;
+	}
+
+	.prism--token.prism--important {
+		background: highlight;
+		color: window;
+		font-weight: normal;
+	}
+
+	.prism--token.prism--atrule,
+	.prism--token.prism--attr-value,
+	.prism--token.prism--function,
+	.prism--token.prism--keyword,
+	.prism--token.prism--operator,
+	.prism--token.prism--selector {
+		font-weight: bold;
+	}
+
+	.prism--token.prism--attr-value,
+	.prism--token.prism--comment,
+	.prism--token.prism--doctype,
+	.prism--token.prism--function,
+	.prism--token.prism--keyword,
+	.prism--token.prism--operator,
+	.prism--token.prism--property,
+	.prism--token.prism--string {
+		color: highlight;
+	}
+
+	.prism--token.prism--attr-value,
+	.prism--token.prism--url {
+		font-weight: normal;
+	}
+}
+
+    </style>
     <link href="{{ '/assets/css/slayder.css' | relative_url }}" rel="stylesheet">
   </head>
   <body class="d-flex d-print-block">
