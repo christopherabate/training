@@ -62,11 +62,12 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/custom-class/prism-custom-class.min.js"></script>
     <script src="{{ '/assets/js/colorModeToggler.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/slayder.js' | relative_url }}"></script>
     <script type="module">
-      // Sandbox init
       import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}"
+      Prism.plugins.customClass.prefix('prism--')
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
         box.addEventListener("input", (event) => {
