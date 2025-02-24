@@ -69,8 +69,9 @@
       import sandbox from "{{ '/assets/js/sandbox.js' | relative_url }}"
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
+        hljs.highlightElement(box);
         box.addEventListener("input", (event) => {
-          hljs.highlightElement(box);
+          //
         });
       });
     </script>
