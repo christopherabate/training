@@ -70,7 +70,7 @@
       document.querySelectorAll(".sandbox").forEach((box) => {
         sandbox({ box: box, editable: true });
         box.addEventListener("input", (event) => {
-          hljs.highlightAll();
+          hljs.highlightElement(box);
         });
       });
     </script>
