@@ -101,7 +101,7 @@ body:fullscreen footer {
     content: " (" attr(href) ")";
   }
 
-  img[alt]:after {
+  img[alt]:not([alt=""]):after {
     content: " (" attr(alt) ")";
   }
 
